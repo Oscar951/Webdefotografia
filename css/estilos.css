@@ -1,0 +1,19 @@
+@font-face{
+  font-family: "Dancing Script";
+  src: url("DancingScript-Regular.otf");
+}
+html{
+  font-family: "Dancing Script";
+  background-color: black;
+}
+.contenido{
+  max-width: 900px;
+}
+.cabecera{
+  background-color: #5b7989;
+}
+.cabecera h1{
+  color: white;
+  text-align: left;
+  text-shadow: 2px 0  #02010a;
+}
