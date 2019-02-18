@@ -1,18 +1,23 @@
-@font-face{
+@font-face{     /* Fuente utilizada para pagina*/
   font-family: "Dancing Script";
   src: url("DancingScript-Regular.otf");
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 html{
   font-family: "Dancing Script";
   background-color: black;
 }
-.contenido{
+.contenido{  /*Parametros de encuadre*/
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
-.cabecera{
+.cabecera{  /* propiedades del header*/
   background-color: #5b7989;
+  margin: auto;
   border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0; /* Para Mozilla*/
   -webkit-border-radius: 10px 10px 0 0; /* Para safari*/
@@ -20,50 +25,144 @@ html{
   width:100%;
   height:100px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.cabecera h1{
+.cabecera h1{ /*Propiedades del nombre de pagina*/
   text-shadow: 2px 0  #02010a;
-  padding-top: 1%;
-  padding-left: 3%;
+  font-size: 30px;
+  padding-right: 15%
 }
-.cabecera nav{
-  padding-top: 5%;
-  padding-left: 40%;
+.cabecera nav{ /* Propiedades de textos de enlace*/
+  font-size: 17px;
+  padding-left: 10%;
 }
-.cabecera nav a{
+
+nav a{
   color: white;
-  font-size: 105%;
+  font-size: 110%;
+  padding-right: 35px;
+  text-decoration: underline;
 }
-.inicio{text-decoration: none;}
+
+.inicio{text-decoration: none;} /* Eliminacion de subrayado en pagina actual*/
 .paisajes{text-decoration: none;}
 .retratos{text-decoration: none;}
 
-.principal{
+.principal{ /*Propiedades de caja para imagen principal*/
   background-color: #82c3a6;
   width: 100%;
   height: 375px;
   margin: auto;
-
+  position: relative;
 }
-.principal img{
-  display:block;
-  margin:auto;
+.principal img{ /*Propiedades de imagen principal*/
+  box-shadow: 2px 2px #02010a;
   width: 75%;
-  padding-top: 1.25%;
+  position: absolute;
+  top: 2.5%;
+  left: 12.25%;
 }
 
-.Secundaria{
+.Secundaria{ /*Propiedades de caja para imagenes secundarias*/
   background-color:  #d5c75f;
   border: 1px;
   width: 100%;
+  height: 325px;
   margin: auto;
   display: flex;
+  flex-flow: row nowrap;
+  align-content: space-around;
+  align-items: center;
 }
+.Secundaria img{box-shadow: 2px 2px #02010a;}
+.Secundaria #caja1{
+  width:50%;
+  text-align: center;}
+.Secundaria #izquierda{width: 85%}
+.Secundaria #izquierda:hover{ /*Propiedades de transformacion, rotacion a 10 grados*/
+  transform: rotate(10deg);
+  box-shadow:  2px 2px #82c3a6;
+}
+.Secundaria #caja2{
+  width:50%;
+  text-align: center;}
+.Secundaria #derecha{width: 75%}
+.Secundaria #derecha:hover{ /*Propiedades de transformacion, traslacion a 5px hacia arriba y 20px a la derecha*/
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px #82c3a6;
+}
+
+
+.Secundaria a{
+  color: black;
+  text-decoration: underline;
+}
+
 footer{
   background-color: #C6d5c5;
+  margin: auto;
   border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px; /* Para Mozilla*/
   -webkit-border-radius: 0 0 10px 10px; /* Para safari*/
   width: 100%;
-  margin: auto;
+  height: 175px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .Contacto{
+  width: 25%;
+  text-align: center;
+}
+footer .Terminos{
+  width: 25%;
+  text-align: center;
+}
+footer .Redes{
+  width: 25%;
+  height: 125px;
+  text-align: center;
+}
+.redes .caja3{
+  width: 35%;
+  height: 20px;
+}
+.Redes #facebook{
+  width: 12%;
+  height: 20px;
+}
+.Redes #Red1{
+  width: 75%;
+}
+.redes .caja4{
+  width: 35%;
+  height: 2px;
+}
+.Redes #twitter{
+  width: 12%;
+  height: 20px;
+}
+.Redes #Red2{
+  width: 95%;
+}
+.redes .caja5{
+  width: 35%;
+  height: 20px;
+}
+.Redes #instagram{
+  width: 12%;
+  height: 20px;
+}
+.Redes #Red3{
+  width: 75%;
+}
+.Redes a{
+  color: black;
+  text-decoration: none;
+}
+footer .Derechos{
+  width: 25%;
+  text-align: center;
 }
