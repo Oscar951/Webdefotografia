@@ -37,7 +37,6 @@ html{
   font-size: 17px;
   padding-left: 10%;
 }
-
 nav a{
   color: white;
   font-size: 110%;
@@ -75,6 +74,7 @@ nav a{
   align-content: space-around;
   align-items: center;
 }
+
 .Secundaria img{box-shadow: 2px 2px #02010a;}
 .Secundaria #caja1{
   width:50%;
@@ -84,6 +84,7 @@ nav a{
   transform: rotate(10deg);
   box-shadow:  2px 2px #82c3a6;
 }
+
 .Secundaria #caja2{
   width:50%;
   text-align: center;}
@@ -92,7 +93,6 @@ nav a{
   transform: translate(20px, -5px);
   box-shadow: 2px 2px #82c3a6;
 }
-
 
 .Secundaria a{
   color: black;
@@ -111,7 +111,8 @@ footer{
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-}
+} /*Propiedades de caja para pie de pagina*/
+/*Propiedades de organizacion*/
 footer .Contacto{
   width: 25%;
   text-align: center;
@@ -120,6 +121,8 @@ footer .Terminos{
   width: 25%;
   text-align: center;
 }
+
+/*Organizacion de imagenes de redes*/
 footer .Redes{
   width: 25%;
   height: 125px;
@@ -162,7 +165,74 @@ footer .Redes{
   color: black;
   text-decoration: none;
 }
+
 footer .Derechos{
   width: 25%;
   text-align: center;
+}
+
+.galeria{ /*Propiedades de caja para imagenes de paisajes y retratos*/
+  background-color:  #d5c75f;
+  border: 1px;
+  width: 100%;
+  height: 375px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+
+
+/*Propiedades de filtros y organizacion de imagenes*/
+.galeria .imagen1{
+  width: 33%;
+  text-align: center;
+}
+.galeria #blur{
+  width: 85%;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.galeria .imagen2{
+  width: 33%;
+  text-align: center;
+}
+.galeria #gris1{
+  width: 85%;
+  -webkit-filter:grayscale(100%);
+  filter:grayscale(100%,);
+}
+.galeria .imagen3{
+  width: 33%;
+  text-align: center;
+}
+.galeria #sepia{
+  width: 85%;
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+.galeria .imagen4{
+  width: 33%;
+  text-align: center;
+}
+.galeria #gris2{
+  width: 85%;
+  -webkit-filter:grayscale(100%);
+  filter:grayscale(100%,);
+}
+.galeria .imagen5{
+  width: 33%;
+  text-align: center;
+}
+.galeria #normal{
+  width: 85%;
+}
+.galeria .imagen6{
+  width: 33%;
+  text-align: center;
+}
+.galeria #gris3{
+  width: 85%;
+  -webkit-filter:grayscale(100%);
+  filter:grayscale(100%,);
 }
