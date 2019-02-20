@@ -8,8 +8,9 @@
 }
 html{
   font-family: "Dancing Script";
-  background-color: black;
+  background-color: #02010a;
 }
+
 .contenido{  /*Parametros de encuadre*/
   max-width: 900px;
   margin-left: auto;
@@ -17,7 +18,6 @@ html{
 }
 .cabecera{  /* propiedades del header*/
   background-color: #5b7989;
-  margin: auto;
   border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0; /* Para Mozilla*/
   -webkit-border-radius: 10px 10px 0 0; /* Para safari*/
@@ -27,6 +27,7 @@ html{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  animation: slidein 2.5s;
 }
 .cabecera h1{ /*Propiedades del nombre de pagina*/
   text-shadow: 2px 0  #02010a;
@@ -39,28 +40,24 @@ html{
 }
 nav a{
   color: white;
-  font-size: 110%;
   padding-right: 35px;
   text-decoration: underline;
 }
 
-.inicio{text-decoration: none;} /* Eliminacion de subrayado en pagina actual*/
+/* Eliminacion de subrayado en pagina actual*/
+.inicio{text-decoration: none;}
 .paisajes{text-decoration: none;}
 .retratos{text-decoration: none;}
 
 .principal{ /*Propiedades de caja para imagen principal*/
   background-color: #82c3a6;
   width: 100%;
-  height: 375px;
-  margin: auto;
-  position: relative;
+  height: 450px;
 }
 .principal img{ /*Propiedades de imagen principal*/
   box-shadow: 2px 2px #02010a;
   width: 75%;
-  position: absolute;
-  top: 2.5%;
-  left: 12.25%;
+  margin: 5%;
 }
 
 .Secundaria{ /*Propiedades de caja para imagenes secundarias*/
@@ -68,7 +65,6 @@ nav a{
   border: 1px;
   width: 100%;
   height: 325px;
-  margin: auto;
   display: flex;
   flex-flow: row nowrap;
   align-content: space-around;
@@ -79,7 +75,7 @@ nav a{
 .Secundaria #caja1{
   width:50%;
   text-align: center;}
-.Secundaria #izquierda{width: 85%}
+.Secundaria #izquierda{width: 85%;}
 .Secundaria #izquierda:hover{ /*Propiedades de transformacion, rotacion a 10 grados*/
   transform: rotate(10deg);
   box-shadow:  2px 2px #82c3a6;
@@ -88,7 +84,7 @@ nav a{
 .Secundaria #caja2{
   width:50%;
   text-align: center;}
-.Secundaria #derecha{width: 75%}
+.Secundaria #derecha{width: 75%;}
 .Secundaria #derecha:hover{ /*Propiedades de transformacion, traslacion a 5px hacia arriba y 20px a la derecha*/
   transform: translate(20px, -5px);
   box-shadow: 2px 2px #82c3a6;
@@ -101,7 +97,6 @@ nav a{
 
 footer{
   background-color: #C6d5c5;
-  margin: auto;
   border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px; /* Para Mozilla*/
   -webkit-border-radius: 0 0 10px 10px; /* Para safari*/
@@ -176,14 +171,14 @@ footer .Derechos{
   border: 1px;
   width: 100%;
   height: 375px;
-  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-
+}
 
 /*Propiedades de filtros y organizacion de imagenes*/
+
 .galeria .imagen1{
   width: 33%;
   text-align: center;
@@ -236,3 +231,145 @@ footer .Derechos{
   -webkit-filter:grayscale(100%);
   filter:grayscale(100%,);
 }
+
+/*Organizacion de media querie*/
+@media screen and (max-width: 899px) { /*para movil*/
+  .contenido {
+    width: 100%;
+  }
+
+  .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .cabecera h1{
+    padding-right: 0;
+  }
+  .cabecera nav{
+    padding-left: 0;
+  }
+
+/*Propiedades de imagen principal*/
+  .principal{
+    width: 100%;
+  }
+  .principal img{
+    margin: 45px;
+    height: 350px;
+  }
+
+/*Propiedades de imagenes secundarias*/
+  .Secundaria{
+    height:550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Secundaria #caja1{
+    width: 100%;
+    height: 250px;
+    padding: 25px;
+  }
+  .Secundaria #caja2{
+    width: 100%;
+    height: 250px;
+  }
+
+/*Propiedades de imagenes de Paisajes y Retratos*/
+  .galeria{
+    width: 100%;
+    height: 2300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .galeria .imagen1{
+    width: 55%;
+    height: 150px;
+    margin-top: -75px;
+  }
+  .galeria .imagen2{
+    width: 55%;
+    height: 150px;
+  }
+  .galeria .imagen3{
+    width: 55%;
+    height: 150px;
+  }
+  .galeria .imagen4{
+    width: 55%;
+    height: 150px;
+  }
+  .galeria .imagen5{
+    width: 55%;
+    height: 150px;
+  }
+  .galeria .imagen6{
+    width: 55%;
+    height: 150px;
+  }
+
+
+/*Propiedades de footer*/
+  footer{
+    width:100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  footer .Contacto{
+    height:100px;
+    text-align: left;
+    margin-top: -25px;
+  }
+  footer .Terminos{
+    height:100px;
+    text-align: left;
+    margin-top: -75px;
+  }
+  footer .Redes{
+    height:100px;
+    text-align: left;
+    margin-top: -100px;
+  }
+  footer .Redes div{
+    height: 35px;
+  }
+  footer .Derechos{
+    height:100px;
+    text-align: left;
+    margin-top: -25px;
+
+  }
+
+@media screen and (min-width: 900px) { /*para desktop*/
+  .contenido {
+    width: 900px;
+  }
+  .Secundaria{
+    display: flex;
+    flex-direction: row;
+  }
+  .galeria{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@-webkit-keyframes slidein{ /*Propiedades para animacion de header*/
+  0%{
+    margin-top: 150%;
+    }
+  60%{
+    margin-top: -5%
+  }
+  100%{
+    margin-top: 0%
+  }
+  }
